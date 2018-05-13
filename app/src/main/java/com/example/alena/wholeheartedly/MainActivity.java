@@ -1,7 +1,6 @@
 package com.example.alena.wholeheartedly;
 
 import android.content.Intent;
-import android.graphics.LightingColorFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -23,11 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         examplesButton.setOnClickListener(this);
         aboutButton.setOnClickListener(this);
         pricesButton.setOnClickListener(this);
-        //startButton.getBackground().setColorFilter(new LightingColorFilter(0xFFFFFFFF, 0xFFAA0000));
-        examplesButton.getBackground().setColorFilter(new LightingColorFilter(0xFFFFFFFF, 0xFFAA0000));
-        aboutButton.getBackground().setColorFilter(new LightingColorFilter(0xFFFFFFFF, 0xFFAA0000));
-        pricesButton.getBackground().setColorFilter(new LightingColorFilter(0xFFFFFFFF, 0xFFAA0000));
-
     }
 
     @Override
