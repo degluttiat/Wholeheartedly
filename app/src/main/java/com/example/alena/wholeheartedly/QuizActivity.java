@@ -2,20 +2,18 @@ package com.example.alena.wholeheartedly;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -244,14 +242,20 @@ public class QuizActivity extends AppCompatActivity {
                     RadioButton radioButton_2 = findViewById(R.id.radio_2);
                     RadioButton radioButton_3 = findViewById(R.id.radio_3);
 
-                    if (pricesTag == 1) {
 
-                    }
-                    if (pricesTag == 2) {
-
-                    }
-                    if (pricesTag == 3) {
-
+                    switch (pricesTag) {
+                        case 1:
+                            sendButtonOption = false;
+                            radioButton_1.setChecked(true);
+                            break;
+                        case 2:
+                            sendButtonOption = false;
+                            radioButton_2.setChecked(true);
+                            break;
+                        case 3:
+                            sendButtonOption = false;
+                            radioButton_3.setChecked(true);
+                            break;
                     }
                     radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                         @Override

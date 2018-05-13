@@ -29,13 +29,15 @@ public class PricesActivity extends AppCompatActivity implements View.OnClickLis
 
             case  R.id.button1:
                 QuizActivity.pricesTag = 1;
+                break;
             case  R.id.button2:
                 QuizActivity.pricesTag = 2;
+                break;
             case  R.id.button3:
                 QuizActivity.pricesTag = 3;
-                Intent intent = new Intent(PricesActivity.this, QuizActivity.class);
-                startActivity(intent);
                 break;
         }
+        Intent intent = new Intent(PricesActivity.this, QuizActivity.class);
+        startActivity(intent);
     }
 }
