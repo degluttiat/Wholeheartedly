@@ -1,6 +1,8 @@
 package com.example.alena.wholeheartedly;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -27,7 +29,6 @@ public class QuizActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    public static int pricesTag;
     private ViewPager mViewPager;
     private Button buttonPrev;
     private Button buttonNext;
@@ -242,8 +243,10 @@ public class QuizActivity extends AppCompatActivity {
                     RadioButton radioButton_2 = findViewById(R.id.radio_2);
                     RadioButton radioButton_3 = findViewById(R.id.radio_3);
 
+                    SharedPreferences shPref = getPreferences(Context.MODE_PRIVATE);
+                    int priceTag = shPref.getInt(getString(R.string.key_price_tag), 0);
 
-                    switch (pricesTag) {
+                    switch (priceTag) {
                         case 1:
                             sendButtonOption = false;
                             radioButton_1.setChecked(true);
@@ -257,6 +260,11 @@ public class QuizActivity extends AppCompatActivity {
                             radioButton_3.setChecked(true);
                             break;
                     }
+
+                    shPref.edit()
+                            .remove(getString(R.string.key_price_tag))
+                            .apply();
+
                     radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                         @Override
                         public void onCheckedChanged(RadioGroup group, int checkedId) {

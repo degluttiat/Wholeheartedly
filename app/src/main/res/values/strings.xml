@@ -18,5 +18,7 @@
     <string name="examples">Examples</string>
     <string name="aboutButton">About</string>
     <string name="prices">Prices</string>
+    <string name="photo">Photo</string>
+    <string name="key_price_tag">key_price_tag</string>
 
 </resources>
