@@ -19,6 +19,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonSend;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private SharedPreferences mShPref;
+    private int currentPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,19 +54,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 mViewPager.arrowScroll(View.FOCUS_LEFT);
                 break;
             case R.id.quizButtonNext:
-                onBtnNextClicked();
+                mViewPager.arrowScroll(View.FOCUS_RIGHT);
                 break;
             case R.id.quizButtonSend:
                 onBtnSendClicked();
                 break;
         }
-    }
-
-    private void onBtnNextClicked() {
-        QuestionFragment fragment = getCurrentFragment();
-        String text = fragment.getEditTextString();
-        saveTextToShPref(mViewPager.getCurrentItem(), text);
-        mViewPager.arrowScroll(View.FOCUS_RIGHT);
     }
 
     private void saveTextToShPref(int currentItem, String text) {
@@ -81,7 +75,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void onBtnSendClicked() {
-        // TODO Save text when user change fragment by swipe
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                 getString(R.string.mailto), getString(R.string.email), null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject));
@@ -104,6 +97,14 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onPageSelected(int position) {
+                if (currentPosition != 18) {
+                    QuestionFragment questionFragment = (QuestionFragment) mSectionsPagerAdapter
+                            .instantiateItem(mViewPager, currentPosition);
+                    String text = questionFragment.getEditTextString();
+                    saveTextToShPref(currentPosition, text);
+                }
+                currentPosition = position;
+
                 switch (position) {
                     case 0:
                         buttonPrev.setVisibility(View.INVISIBLE);

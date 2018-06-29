@@ -40,11 +40,11 @@ public class QuestionFragment extends Fragment {
         int x = mRadioGroup.getCheckedRadioButtonId(); // -1 or id of selected RadioButton
 
         switch (x) {
-            case 0:
+            case R.id.radio_1:
                 return getString(R.string.price1);
-            case 1:
+            case R.id.radio_2:
                 return getString(R.string.price2);
-            case 2:
+            case R.id.radio_3:
                 return getString(R.string.price3);
             default:
                 return "";
