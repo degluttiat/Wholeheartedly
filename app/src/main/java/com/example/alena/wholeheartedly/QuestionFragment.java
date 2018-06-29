@@ -83,7 +83,9 @@ public class QuestionFragment extends Fragment {
         RadioButton radioButton_2 = rootView.findViewById(R.id.radio_2);
         RadioButton radioButton_3 = rootView.findViewById(R.id.radio_3);
 
-        SharedPreferences shPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences shPref = getContext().getApplicationContext()
+                .getSharedPreferences("shpref", Context.MODE_PRIVATE);
+
         int priceTag = shPref.getInt(getString(R.string.key_price_tag), 0);
         switch (priceTag) {
             case 0:

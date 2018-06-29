@@ -1,6 +1,5 @@
 package com.example.alena.wholeheartedly;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -25,7 +24,7 @@ public class PricesActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        SharedPreferences shPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences shPref = getApplicationContext().getSharedPreferences("shpref", MODE_PRIVATE);
         SharedPreferences.Editor editor = shPref.edit();
 
         switch (view.getId()) {

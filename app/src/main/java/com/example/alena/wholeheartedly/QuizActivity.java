@@ -1,6 +1,5 @@
 package com.example.alena.wholeheartedly;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -25,7 +24,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        mShPref = getPreferences(Context.MODE_PRIVATE);
+        mShPref = getApplicationContext().getSharedPreferences("shpref", MODE_PRIVATE);
         setToolBar();
         setViewsAndListeners();
         setViewPager();
