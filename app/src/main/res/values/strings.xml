@@ -31,5 +31,30 @@
     <string name="mailto">mailto</string>
     <string name="mail_subject">Wholeheartedly</string>
     <string name="chooser_intent_title">Send Email</string>
+    <string name="price1">2 – 3 quatrains</string>
+    <string name="price2">4 – 6 quatrains</string>
+    <string name="price3">7 – 10 quatrains</string>
+
+    <string-array name="questions_array">
+        <item>0</item>
+        <item>Name:</item>
+        <item>Profession:</item>
+        <item>Skills:</item>
+        <item>Hobby:</item>
+        <item>Languages s/he knows:</item>
+        <item>A sphere s/he is an expert in:</item>
+        <item>Favorite book:</item>
+        <item>Favorite movie:</item>
+        <item>Favorite sport activity:</item>
+        <item>Favorite meal:</item>
+        <item>Personality traits that you appreciate:\n\nKindness, beauty, intuition, ability to listen, self criticism etc</item>
+        <item>Events and recollections:\n\nCircumstances you got to know each other under, a trip you've been to together, help in your moment of need, a surprise made for you etc</item>
+        <item>Geographic location:\n\nFavorite cafe, bar, pub, etc / Countries, where the person has traveled / City on birth or where s/he living now</item>
+        <item>Outlook:\n\nIs that person shorter or taller that most other people? / Haircut / Dressing style / Beard / Mustache</item>
+        <item>Good or bad habits:\n\nLoves to help adult people / Loves to donate / Perfectionism at work / Smoking / Etc!</item>
+        <item>How has that person impacted you?</item>
+        <item>Similarities or differences between you and that person:\n\nOr, maybe, you would like to emphasize how you complement each other?</item>
+        <item>What would you like to wish to your dear person?\n\nThese wishes should be related to the event, be it health &amp; wealth wishes for a b-day,healthy relationship, harmony and many children for a wedding day or a successful career for someone who just finished studying in a college etc</item>
+    </string-array>
 
 </resources>
