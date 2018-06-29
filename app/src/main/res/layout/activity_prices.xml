@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_margin="16dp"
+    android:orientation="vertical"
     tools:context="com.example.alena.wholeheartedly.PricesActivity">
 
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2 - 3 quatrains = 15$"/>
+        android:text="@string/_2_3_quatrains_15" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="4 - 6 quatrains = 25$"/>
+        android:text="@string/_4_6_quatrains_25" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="7 - 10 quatrains = 40$"/>
-
+        android:text="@string/_7_10_quatrains_40" />
 
 
 </LinearLayout>

@@ -11,7 +11,7 @@
 
     <string name="text2">Тихий голос моей души,\nГоворит мне: "Ты жить спеши...\nНе печалься и не хандри... \nЖизнь дается... а ты бери..."\nТы возьми...этот теплый свет...\nГде-то там его... просто нет... \nТы поймай...этот яркий луч...\nДаже если он... из-за туч... \nШелест листьев и детский крик, \nТы бери... и в себе храни... \nЛетний дождь... невесомый снег...\nТы бери...тихий плачь и смех...\nИ любовь,что тебе дана...\nТы испей её всю до дна...\nДаже если придет беда...\nТы возьми её не навсегда...\nЯ спрошу у своей души:\n"Может быть... посидим в тиши?"\nУлыбнется не зло она:\n"Ещё будет у нас... тишина..."</string>
     <string name="title_activity_quiz">QuizActivity</string>
-    <string name="n">Just answer a short list of questions regarding a person you hold dear and remember - the more information you provide, the mor detailed and interesting your poem will get!</string>
+    <string name="just_answer">Just answer a short list of questions regarding a person you hold dear and remember - the more information you provide, the mor detailed and interesting your poem will get!</string>
     <string name="logo">Logo</string>
     <string name="welcome_text">There are many different presents one can give, but I will write one that truly stands out.  Let\'s give your loved ones a SPECIAL treat!</string>
     <string name="start">Start</string>
@@ -20,5 +20,16 @@
     <string name="prices">Prices</string>
     <string name="photo">Photo</string>
     <string name="key_price_tag">key_price_tag</string>
+    <string name="_2_3_quatrains_15">2 – 3 quatrains = 15$</string>
+    <string name="_4_6_quatrains_25">4 – 6 quatrains = 25$</string>
+    <string name="_7_10_quatrains_40">7 – 10 quatrains = 40$</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="send">Send</string>
+    <string name="select_option">Select one of the options to continue</string>
+    <string name="email">sergei.pismeny@gmail.com</string>
+    <string name="mailto">mailto</string>
+    <string name="mail_subject">Wholeheartedly</string>
+    <string name="chooser_intent_title">Send Email</string>
 
 </resources>

@@ -30,60 +30,58 @@
 
     </android.support.design.widget.AppBarLayout>
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_alignParentTop="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="@string/n" />
-
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/container"
-        android:layout_below="@+id/section_label"
-        android:layout_above="@+id/quizButtonPrev"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        tools:ignore="RelativeOverlap">
 
-    <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/quizButtonPrev"
+        <TextView
+            android:id="@+id/section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/just_answer" />
 
-        android:layout_width="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_height="wrap_content"
-        android:text="Prev"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/quizButtonPrev"
+            android:layout_below="@+id/section_label"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <Button
-        android:id="@+id/quizButtonNext"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Next"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/quizButtonPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:text="@string/prev"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/quizButtonSend"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_margin="16dp"
-        android:background="#7b83c7"
-        android:text="Send"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/quizButtonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:text="@string/next" />
 
-
-
-</RelativeLayout>
-
+        <Button
+            android:id="@+id/quizButtonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:background="#7b83c7"
+            android:text="@string/send"
+            android:visibility="invisible" />
+    </RelativeLayout>
 
 </LinearLayout>
