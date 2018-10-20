@@ -28,7 +28,9 @@
         <activity
             android:name=".QuizActivity"
             android:label="@string/title_activity_quiz"
+             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
+
 
 </manifest>

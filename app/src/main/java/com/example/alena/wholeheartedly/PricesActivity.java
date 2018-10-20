@@ -2,8 +2,10 @@ package com.example.alena.wholeheartedly;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class PricesActivity extends AppCompatActivity implements View.OnClickListener {
@@ -12,6 +14,11 @@ public class PricesActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prices);
+
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
+        toolbar.setTitle("Prices");
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
 
         setClickListeners();
     }

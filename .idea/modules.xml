@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\User\AndroidStudioProjects\Wholeheartedly\.idea\Wholeheartedly.iml" filepath="C:\Users\User\AndroidStudioProjects\Wholeheartedly\.idea\Wholeheartedly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Wholeheartedly/.idea/Wholeheartedly.iml" filepath="$PROJECT_DIR$/../Wholeheartedly/.idea/Wholeheartedly.iml" />
       <module fileurl="file://$PROJECT_DIR$/Wholeheartedly2.iml" filepath="$PROJECT_DIR$/Wholeheartedly2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fon2"
     tools:context="com.example.alena.wholeheartedly.MainActivity">
 
     <LinearLayout
@@ -10,58 +12,100 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+           <!-- <ImageView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/a3b" />
+-->
+        </android.support.v7.widget.Toolbar>
+
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="110dp"
-            android:src="@drawable/a3"
-            android:contentDescription="@string/logo" />
+            android:layout_width="wrap_content"
+            android:paddingTop="20sp"
+            android:layout_height="150dp"
+            android:src="@drawable/mash2"
+            android:alpha="0.75"
+            android:layout_gravity="center"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="16dp"
             android:text="@string/welcome_text"
-            android:textSize="17sp"
             android:textColor="#000000"
+            android:textSize="17sp"
+            android:gravity="center"
             android:textStyle="bold" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/start_button"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:text="@string/start" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/roundrect"
+            android:drawableLeft="@drawable/ic_start"
+            android:gravity="left|center_vertical"
+            android:text="@string/start"
+            android:textAllCaps="false" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:id="@+id/examples_button"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_gravity="center"
-            android:text="@string/examples" />
-
-        <Button
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:id="@+id/about_button"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:text="@string/aboutButton" />
-
-        <Button
-            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/prices_button"
-            android:layout_width="200dp"
-            android:layout_margin="5dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/prices" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/roundrect"
+            android:drawableLeft="@drawable/ic_prices"
+            android:gravity="left|center_vertical"
+            android:text="@string/prices"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/examples_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/roundrect"
+            android:drawableLeft="@drawable/ic_examples"
+            android:gravity="left|center_vertical"
+            android:text="@string/examples"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/about_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/roundrect"
+            android:drawableLeft="@drawable/ic_about"
+            android:gravity="left|center_vertical"
+            android:text="@string/aboutButton"
+            android:textAllCaps="false" />
+
 
     </LinearLayout>
 

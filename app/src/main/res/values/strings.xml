@@ -14,15 +14,15 @@
     <string name="just_answer">Just answer a short list of questions regarding a person you hold dear and remember - the more information you provide, the mor detailed and interesting your poem will get!</string>
     <string name="logo">Logo</string>
     <string name="welcome_text">There are many different presents one can give, but I will write one that truly stands out.  Let\'s give your loved ones a SPECIAL treat!</string>
-    <string name="start">Start</string>
-    <string name="examples">Examples</string>
-    <string name="aboutButton">About</string>
-    <string name="prices">Prices</string>
+    <string name="start">"     "Start</string>
+    <string name="examples">"     "Examples</string>
+    <string name="aboutButton">"     "About</string>
+    <string name="prices">"     "Prices</string>
     <string name="photo">Photo</string>
     <string name="key_price_tag">key_price_tag</string>
-    <string name="_2_3_quatrains_15">2 – 3 quatrains = 15$</string>
-    <string name="_4_6_quatrains_25">4 – 6 quatrains = 25$</string>
-    <string name="_7_10_quatrains_40">7 – 10 quatrains = 40$</string>
+    <string name="_2_3_quatrains_15">"     "2 – 3 quatrains = 15$</string>
+    <string name="_4_6_quatrains_25">"     "4 – 6 quatrains = 25$</string>
+    <string name="_7_10_quatrains_40">"     "7 – 10 quatrains = 40$</string>
     <string name="prev">Prev</string>
     <string name="next">Next</string>
     <string name="send">Send</string>
@@ -34,6 +34,8 @@
     <string name="price1">2 – 3 quatrains</string>
     <string name="price2">4 – 6 quatrains</string>
     <string name="price3">7 – 10 quatrains</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
 
     <string-array name="questions_array">
         <item>0</item>
