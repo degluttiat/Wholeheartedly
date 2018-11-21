@@ -10,6 +10,7 @@
     android:orientation="vertical"
     tools:context="com.example.alena.wholeheartedly.QuizActivity">
 
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -86,5 +87,6 @@
             android:text="@string/send"
             android:visibility="invisible" />
     </RelativeLayout>
+
 
 </LinearLayout>
