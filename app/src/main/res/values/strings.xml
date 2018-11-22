@@ -11,7 +11,7 @@
 
     <string name="text2">Тихий голос моей души,\nГоворит мне: "Ты жить спеши...\nНе печалься и не хандри... \nЖизнь дается... а ты бери..."\nТы возьми...этот теплый свет...\nГде-то там его... просто нет... \nТы поймай...этот яркий луч...\nДаже если он... из-за туч... \nШелест листьев и детский крик, \nТы бери... и в себе храни... \nЛетний дождь... невесомый снег...\nТы бери...тихий плачь и смех...\nИ любовь,что тебе дана...\nТы испей её всю до дна...\nДаже если придет беда...\nТы возьми её не навсегда...\nЯ спрошу у своей души:\n"Может быть... посидим в тиши?"\nУлыбнется не зло она:\n"Ещё будет у нас... тишина..."</string>
     <string name="title_activity_quiz">QuizActivity</string>
-    <string name="just_answer">Just answer a short list of questions regarding a person you hold dear and remember - the more information you provide, the more detailed and interesting your poem will get!\n\nIf you don\'t know the answer to a certain question, you may press \"next\", without typing anything.</string>
+    <string name="just_answer">Just answer a short list of questions regarding a person you hold dear and remember - the more information you provide, the more detailed and interesting your poem will get!\n</string>
     <string name="logo">Logo</string>
     <string name="welcome_text">There are many different presents one can give, but I will write one that truly stands out.  Let\'s give your loved ones a SPECIAL treat!</string>
     <string name="start">"     "Start</string>
@@ -36,6 +36,7 @@
     <string name="price3">7 – 10 quatrains</string>
     <string name="left">Left</string>
     <string name="right">Right</string>
+    <string name="if_you_don_t_know_the_answer">If you don\'t know the answer If you don\'t know the answer to a certain question, you may press \"next\", without typing anything.</string>
 
     <string-array name="questions_array">
         <item>0</item>
