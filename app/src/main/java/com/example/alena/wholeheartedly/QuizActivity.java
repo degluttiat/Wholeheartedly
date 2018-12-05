@@ -8,28 +8,32 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewPager mViewPager;
-    private Button buttonPrev;
-    private Button buttonNext;
-    private Button buttonSend;
+    private ImageView imagePrev;
+    private ImageView imageNext;
+    private TextView textViewSend;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private SharedPreferences mShPref;
     private int currentPosition;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         mShPref = getApplicationContext().getSharedPreferences("shpref", MODE_PRIVATE);
+        mTextView = findViewById(R.id.section_label);
         setToolBar();
         setViewsAndListeners();
         setViewPager();
     }
+
 
     private void setToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -38,13 +42,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setViewsAndListeners() {
-        buttonPrev = findViewById(R.id.quizButtonPrev);
-        buttonNext = findViewById(R.id.quizButtonNext);
-        buttonSend = findViewById(R.id.quizButtonSend);
+        imagePrev = findViewById(R.id.quizButtonPrev);
+        imageNext = findViewById(R.id.quizButtonNext);
+        textViewSend = findViewById(R.id.quizButtonSend);
 
-        buttonPrev.setOnClickListener(this);
-        buttonNext.setOnClickListener(this);
-        buttonSend.setOnClickListener(this);
+        imagePrev.setOnClickListener(this);
+        imageNext.setOnClickListener(this);
+        textViewSend.setOnClickListener(this);
     }
 
     @Override
@@ -97,7 +101,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onPageSelected(int position) {
-                if (currentPosition != 18) {
+                if (currentPosition != 19 && currentPosition != 0) {
                     QuestionFragment questionFragment = (QuestionFragment) mSectionsPagerAdapter
                             .instantiateItem(mViewPager, currentPosition);
                     String text = questionFragment.getEditTextString();
@@ -107,18 +111,20 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
                 switch (position) {
                     case 0:
-                        buttonPrev.setVisibility(View.INVISIBLE);
+                        imagePrev.setVisibility(View.INVISIBLE);
+                        mTextView.setVisibility(View.GONE);
                         break;
                     case 1:
-                        buttonPrev.setVisibility(View.VISIBLE);
-                        break;
-                    case 17:
-                        buttonNext.setVisibility(View.VISIBLE);
-                        buttonSend.setVisibility(View.INVISIBLE);
+                        imagePrev.setVisibility(View.VISIBLE);
+                        mTextView.setVisibility(View.VISIBLE);
                         break;
                     case 18:
-                        buttonNext.setVisibility(View.INVISIBLE);
-                        buttonSend.setVisibility(View.VISIBLE);
+                        imageNext.setVisibility(View.VISIBLE);
+                        textViewSend.setVisibility(View.INVISIBLE);
+                        break;
+                    case 19:
+                        imageNext.setVisibility(View.INVISIBLE);
+                        textViewSend.setVisibility(View.VISIBLE);
                         break;
                 }
             }

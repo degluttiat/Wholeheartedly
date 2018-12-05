@@ -54,11 +54,13 @@ public class QuestionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         setRetainInstance(true);
         int section = getArguments().getInt(ARG_SECTION_NUMBER);
         View rootView;
-
-        if (section == 19) {
+        if (section == 1){
+            rootView = inflater.inflate(R.layout.fragment_quiz_start, container, false);
+        } else if (section == 20) {
             rootView = inflater.inflate(R.layout.fragment_quiz2, container, false);
             setPrices(rootView);
         } else {
@@ -69,14 +71,16 @@ public class QuestionFragment extends Fragment {
         return rootView;
     }
 
+
+
     private void setQuestion(int section, View rootView) {
         TextView textView = rootView.findViewById(R.id.fragmentTextView);
         String[] questionsArray = getResources().getStringArray(R.array.questions_array);
-        textView.setText(questionsArray[section]);
+        textView.setText(questionsArray[section -1]);
 
         mEditText = rootView.findViewById(R.id.fragmentEditText);
     }
-
+ 
     private void setPrices(View rootView) {
         mRadioGroup = rootView.findViewById(R.id.radioGroup);
         RadioButton radioButton_1 = rootView.findViewById(R.id.radio_1);

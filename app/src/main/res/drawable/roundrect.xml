@@ -9,5 +9,7 @@
 
     </solid>
 
-    <padding android:left="16dp" />
+    <padding
+        android:left="16dp"
+        android:right="16dp"         />
 </shape>

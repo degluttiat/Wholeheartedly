@@ -21,32 +21,32 @@
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-           <!-- <ImageView
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/a3b" />
--->
+            <!-- <ImageView
+                 android:layout_width="125dp"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/a3b" />
+ -->
         </android.support.v7.widget.Toolbar>
 
         <ImageView
             android:layout_width="wrap_content"
-            android:paddingTop="20sp"
             android:layout_height="150dp"
-            android:src="@drawable/mash2"
+            android:layout_gravity="center"
             android:alpha="0.75"
-            android:layout_gravity="center"/>
+            android:paddingTop="20sp"
+            android:src="@drawable/mash2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
             android:text="@string/welcome_text"
             android:textColor="#000000"
             android:textSize="17sp"
-            android:gravity="center"
             android:textStyle="bold" />
 
         <Button
@@ -54,12 +54,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/roundrect"
+            android:drawableStart="@drawable/ic_start"
             android:drawableLeft="@drawable/ic_start"
-            android:gravity="left|center_vertical"
+            android:gravity="left|center_vertical|start"
             android:text="@string/start"
             android:textAllCaps="false" />
 
@@ -68,12 +71,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/roundrect"
             android:drawableLeft="@drawable/ic_prices"
-            android:gravity="left|center_vertical"
+            android:drawableStart="@drawable/ic_prices"
+            android:gravity="left|center_vertical|start"
             android:text="@string/prices"
             android:textAllCaps="false" />
 
@@ -83,12 +87,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/ic_examples"
             android:background="@drawable/roundrect"
             android:drawableLeft="@drawable/ic_examples"
-            android:gravity="left|center_vertical"
+            android:gravity="left|center_vertical|start"
             android:text="@string/examples"
             android:textAllCaps="false" />
 
@@ -97,12 +102,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
+            android:drawableStart="@drawable/ic_about"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/roundrect"
             android:drawableLeft="@drawable/ic_about"
-            android:gravity="left|center_vertical"
+            android:gravity="left|center_vertical|start"
             android:text="@string/aboutButton"
             android:textAllCaps="false" />
 

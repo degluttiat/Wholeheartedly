@@ -20,6 +20,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 19;
+        return 20;
     }
 }

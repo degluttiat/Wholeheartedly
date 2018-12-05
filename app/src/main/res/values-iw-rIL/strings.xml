@@ -1,2 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Wholeheartedly</string>
+    <string name="about">היי, שמי סרגיי ואני משורר חצר מקצועי בכל סוגי האירועים כותב ברכות בחרוזים על מכונת כתיבה קטנה מכל הלב, באהבה! אני שואל את האורחים על אנשים שהם אוהבים ותוך דקות ספורות - יוצאים מזה שירים ייחודיים וכשקורא את הברכה  הבן אדם, שלו היא הוקדשה נהייה ברור לו תוך שנייה שרק עליו היא נכתבה אז מי שמעוניין באטרקציה מקורית שתפנק את האורחים במתנה כה ייחודית כמו שיר, שבמקום נכתב, רק בשבילם בעברית, רוסית, או באנגלית תפנו אליי בפייסבוק, טלפון, או אי-מייל ותקבלו חינם דוגמא להקדשה אישית!</string>
+    <string name="if_you_don_t_know_the_answer">"אם התשובה לשאלה מסוימת לא ידועה לכם, תוכלו ללחוץ \"הבא\", בלי למלא שום דבר. "</string>
+    <string name="start">"   התחל"</string>
+    <string name="select_option">נא לבחור באחת מהאפשרויות בשביל להמשיך.</string>
+    <string name="email">sergei.pismeny@gmail.com</string>
+    <string name="mail_subject">Wholeheartedly</string>
+    <string name="just_answer">"פשוט תענו על רשימה קצרה של שאלות בנוגע לבן אדם קרוב לליבכם ותזכרו - כמה שיותר מידע תספקו, ככה השיר יצא יותר אמין ומעניין! "</string>
+    <string name="welcome_text">"יש הרבה אפשרויות שונות של מתנות שאפשר לתת, אבל אני אכתוב משהו יוצא דופן. בואו נפנק את האנשים היקרים לכם באופן מ-י-ו-ח-ד! "</string>
+    <string name="examples">"   דוגמאות"</string>
+    <string name="aboutButton">"   אודות"</string>
+    <string name="prices">"   מחירים"</string>
+    <string name="photo">Photo</string>
+    <string name="key_price_tag">key_price_tag</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="send">Send</string>
+    <string name="mailto">mailto</string>
+    <string name="chooser_intent_title">Send Email</string>
+    <string name="price1">2 - 3 בתים</string>
+    <string name="price2">4 - 6 בתים</string>
+    <string name="price3">7 - 10 בתים</string>
+    <string name="_2_3_quatrains_15">"2 - 3 בתים   "</string>
+    <string name="_4_6_quatrains_25">"4 - 6 בתים   "</string>
+    <string name="_7_10_quatrains_40">"7 - 10 בתים   "</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_examples">ExamplesActivity</string>
+    <string name="text">"\t\tתמי ואני, כבר אומנם לא בצופים
+     אבל בכיף גדול עוברים להם העשורים
+     עם גישה יצירתית והרבה שוקולד מתוק
+     האדריכלית הזאת עושה הכל כה טוב!
+
+     עשרים ושלוש שנות נישואין מאושרות
+     שגל, רותם וכליל בשבילנו מקשטות
+     לכל גבר אאחל, בטון מלא חיוב
+     שיתחתן עם מישהי שיש לה כזה חיוך! "</string>
+    <string name="text1">"\t\tהכרתם ביום הולדת שלי, לפני 8 שנים
+     חגגנו על שפת כינרת וישנו באוהלים
+     לקח לא מעט זמן עד שנהייתם זוג
+     אך אין ספק שאולגה מצאה אחלה בן זוג!
+
+     את בוריס מכירה אני כבר 13 שנים
+     ידיד יקר, דוגמת מופת בשביל הרבה גברים
+     מופנם, שקטן ואחראי, אכפתי ודואג
+     רגליים על הקרקע, סבלני, תמיד עוזר
+
+     ואולגה, בן אדם מדהים ואחלה חברה
+     גבוהה, יפה וחכמה. בוריס - אחלה בחירה! :)
+     אומרת את מה שבאמת חושבת, בפנים
+     כיף מהצד לראות איך זה את זו אתם משלימים
+
+     אומנם עכשיו, יש פחות זמן לקרוא ספרים
+     לראות סדרות, להיות בבית קפה עם חברים
+     אבל אני שמחה לראות אתכם מאושרים
+     ואולגה כבר מוקפת בארבעה גברים
+
+     והגברים הנ\"ל - לכל הטוב כבר רגילים
+     לחום, לאהבה וגם לאחלה תבשילים
+     כה טעימים, שכיף להשמין מהם בנחת
+     עם התחלה כזאת, כדאי שגם תמשיכו ככה
+
+     תהיו אתם, אל תשתנו, להסתדר תמשיכו!
+     אל תהססו ליזום - אם תנסו, תצליחו!
+     תמשיך לשמש דוגמה טובה, בתור הורים
+     והכי חשוב - תהיו כולכם תמיד בריאים! "</string>
+    <string name="text2">"\t\tלא לכל אחת יש חברה
+     שלא מאכזבת כבר 15 שנה
+     אולי רמזתי פעם שאת די מפונקת
+     אך את גם מפנקת את קרובייך באהבה!
+
+     האושר בעיניים של אלכס ושל רון
+     זאת הוכחה שאת עושה הכל נכון
+     מעטים זוכים לכזאת אישה ואמא
+     לכן, כולנו אוהבים ומעריכים את נינה!
+
+     עלייך תמיד סמכתי, מימיי הפנימיה
+     את שומרת על קור רוח, יותר טוב מנמייה
+     את תמיד נשארת שקטה ורגועה
+     גם אם בתוכך מתחוללת סערה
+
+     את אשת אשכולות, תמיד קוראת המון
+     ובתחום הקריירה - לא עומדת במקום
+     מוכשרת, מתעניינת בתחומים מגוונים
+     זאת עוד סיבה למה אותך אנחנו אוהבים!
+
+     כמו קורס צילום, שבו ידעת יותר מהמורה
+     עם כל תחום בחיים, את מסתדרת כה יפה
+     עם כוס יין למברוסקו ועם מבט כובש
+     תמיד תוכלי להסתדר, במים ובאש
+
+     ממך כדאי לקחת דוגמה - כדאי מאוד!
+     את תמיד מחפשת דרך להגדיל את ההכנסות
+     מנהלת חשבונות עם גישה יצירתית
+     מוכשרת ושולטת מצויין גם באנגלית!
+
+     שירים רומנטיים - זה תמיד אצלך בדם
+     אומנם את מפונקת, אבל את אחלה בן אדם!
+     את מכירה כל קליפ שיש בו חבר'ה חתיכים
+     אבל, תחת כנפך - רון ואלכס בטוחים
+
+     ואין סיבה שלא - כשיש את נינה בסביבה
+     תהייה בתוך הבית תחושה של חום ואהבה
+     תחושה של ביטחון, של יציבות ושל שגשוג
+     הרמוניה שאליה צריך לשאוף כל זוג
+
+     אז מה אני אאחל ביום המיוחד הזה?
+     בריאות, אושר ועושר וכושר מעולה
+     המשך פריחה של קשר זוגי כל-כך יפה
+     ו… איך אפשר שלא?! סקס - לא מהעולם הזה!
+
+     שכל קרובייך יהיו בריאים, יהיו מאושרים
+     ושתהיי נאמנה תמיד לחברים
+     שתמיד תהיי עם חיוך על הפנים
+     ועם קצת סבלנות - הכל תשיגי בחיים! "</string>
+
+    <string-array name="questions_array">
+        <item>0</item>
+        <item>Name:</item>
+        <item>Profession:</item>
+        <item>Skills:</item>
+        <item>Hobby:</item>
+        <item>Languages s/he knows:</item>
+        <item>A sphere s/he is an expert in:</item>
+        <item>Favorite book:</item>
+        <item>Favorite movie:</item>
+        <item>Favorite sport activity:</item>
+        <item>Favorite meal:</item>
+        <item>Personality traits that you appreciate:\n\nKindness, beauty, intuition, ability to listen, self criticism etc</item>
+        <item>Events and recollections:\n\nCircumstances you got to know each other under, a trip you\'ve been to together, help in your moment of need, a surprise made for you etc</item>
+        <item>Geographic location:\n\nFavorite cafe, bar, pub, etc / Countries, where the person has traveled / City on birth or where s/he living now</item>
+        <item>Outlook:\n\nIs that person shorter or taller that most other people? / Haircut / Dressing style / Beard / Mustache</item>
+        <item>Good or bad habits:\n\nLoves to help adult people / Loves to donate / Perfectionism at work / Smoking / Etc!</item>
+        <item>How has that person impacted you?</item>
+        <item>Similarities or differences between you and that person:\n\nOr, maybe, you would like to emphasize how you complement each other?</item>
+        <item>What would you like to wish to your dear person?\n\nThese wishes should be related to the event, be it health &amp; wealth wishes for a b-day,healthy relationship, harmony and many children for a wedding day or a successful career for someone who just finished studying in a college etc</item>
+    </string-array>
+
+</resources>

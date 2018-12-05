@@ -1,2 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Wholeheartedly</string>
+    <string name="start">"  Начать"</string>
+    <string name="if_you_don_t_know_the_answer">Если вы не знаете ответа на определённый вопрос, вы можете нажать “дальше”, ничего не заполняя.</string>
+    <string name="select_option">Для продолжения, выберите один из вариантов.</string>
+    <string name="email">sergei.pismeny@gmail.com</string>
+    <string name="mail_subject">Wholeheartedly</string>
+    <string name="just_answer">"Просто ответьте на короткий список вопросов о дорогом вам человеке и помните - чем больше информации вы предоставите, тем более интересными получатся стихи! "</string>
+    <string name="welcome_text">"Подарить можно много разных видов подарков, но тот, который создам я - будет поистине выделяться. Давайте сделаем вашим любимым ОСОБЕННЫЙ сюрприз! "</string>
+    <string name="examples">"  Примеры "</string>
+    <string name="aboutButton">"  Обо мне "</string>
+    <string name="prices">"  Цены"</string>
+    <string name="photo">Photo</string>
+    <string name="key_price_tag">key_price_tag</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="send">Send</string>
+    <string name="mailto">mailto</string>
+    <string name="chooser_intent_title">Send Email</string>
+    <string name="price1">2 - 3 Четверостишья</string>
+    <string name="price2">4 - 6 Четверостиший</string>
+    <string name="price3">7 - 10 Четверостиший</string>
+    <string name="_2_3_quatrains_15">"   2 - 3 Четверостишья"</string>
+    <string name="_4_6_quatrains_25">"   4 - 6 Четверостиший"</string>
+    <string name="_7_10_quatrains_40">"   7 - 10 Четверостиший"</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_examples">ExamplesActivity</string>
+    <string name="about">\tЗдравствуйте, моё имя - Сергей\n
+        \tИ хочу с вами я поделиться\n
+        \tТем, что радует сильно людей\n
+        \tПробуждая улыбки на лицах\n\n
+
+        \tУ меня есть богатства несметные\n
+        \tА сокровища эти - слова\n
+        \tСогреть, любое способные сердце\n
+        \tТак, чтоб кругом пошла голова\n\n
+
+        \tЕсли сделать хотите подарок\n
+        \tВы кому-то, кто вами любим\n
+        \tОчень близок и сильно вам дорог\n
+        \tМы особый сюрприз создадим!\n\n
+
+        \tНапишите вы мне о персоне об этой\n
+        \tО том, что цените в том человеке\n
+        \tС моей лёгкой руки, анкета станет поэмой\n
+        \tО том, иль о той, кто вам важнее всех на свете </string>
+    <string name="text">"\tУ Иры, очи – голубы, как небеса. Стройна фигура, как у антилопы
+   О ней подумав, не могу не написать ни слова о её прекрасной попе
+   Она не есть на улице шаверму, но дома – иногда, готовит пиццу
+   Изредка, не причиняя вреда, ни талии, ни упругим ягодицам
+
+   Живёт она в Москве, в районе спальном, в еле заметном, тихом переулке
+   Вы не найдёте ни в одной пекарне, такие аппетитные две булки
+   Меня учили – “Не смотри на попу, пока цвет не запомнишь, её глаз!”
+   Другие у меня проиритеты, в топе. Дальноником я рад быть, в первый раз!
+
+   И всё это – воды чистейшей правда. Без преувеличений и без лести.
+   Я вздыхаю часто, вспоминая об этом миловидном, мягком месте
+   Мораль стиха – как валенок проста. Попу хвалить – не пошлость и не грубость.
+   Когда не видно декольте, когда зима, другая привлекает глаз округлость! "</string>
+    <string name="text2">"\tДело было на Таглите
+   Познакомились мы там
+   И спустя пять лет, почти
+   Даюсь диву я и сам
+
+   Длинный путь, против течения
+   Прошли вместе, ты и я
+   От знакомства, до обручения
+   На площади Вахитова
+
+   Благодарен я судьбе
+   Что тогда встретился с тобой
+   Знаю, не нашёл нигде бы
+   Я такой как ты, второй
+
+   Такой доброй и красивой
+   Талантливой, трудолюбивой
+   Очень улыбчивой и нежной
+   Эрудированной и вежливой
+
+   Рано ложишься и встаёшь ты
+   Усердно трудишься весь день
+   Ни в работе, ни в учёбе
+   Тобой не овладеет лень
+
+   Психологию ты любишь
+   Но не лезешь людям в душу
+   Не привередлива в еде
+   И к фауне - не равнодушна
+
+   Много ты читаешь книг
+   И много языков ты знаешь
+   И посуду, не помытой
+   Оставить мне не позволяешь
+
+   Хорошо с тобой мне в Праге
+   В Петах Тикве и в Казани
+   Так-же было-бы, уверен
+   Мне с тобой в Узбекистане
+
+   Ну, а в этой день, особый
+   Пожелать хочу тебе я
+   Много терпения в учёбе
+   Дерзай науку, не робея!
+
+   Когда солнце за окном
+   И когда за окном ненастье
+   Учись, а я уж позабочусь
+   О Любви, ну и о счастье!"</string>
+
+    <string-array name="questions_array">
+        <item>0</item>
+        <item>Имя:</item>
+        <item>Профессия:</item>
+        <item>Skills:</item>
+        <item>Хобби:</item>
+        <item>Знание языков:</item>
+        <item>Обширные знания в определённой сфере:</item>
+        <item>Любимая книга:</item>
+        <item>Любимый фильм:</item>
+        <item>Любимый вид спорта:</item>
+        <item>Любимое блюдо:</item>
+        <item>Personality traits that you appreciate:\n\nKindness, beauty, intuition, ability to listen, self criticism etc</item>
+        <item>Events and recollections:\n\nCircumstances you got to know each other under, a trip you\'ve been to together, help in your moment of need, a surprise made for you etc</item>
+        <item>Географические места:\n\nЛюбимое кафе / Страны, в которых человек был / Город, в котором родился, или живёт сейчас и т.д. и т.п.</item>
+        <item>Outlook:\n\nIs that person shorter or taller that most other people? / Haircut / Dressing style / Beard / Mustache</item>
+        <item>Good or bad habits:\n\nLoves to help adult people / Loves to donate / Perfectionism at work / Smoking / Etc!</item>
+        <item>How has that person impacted you?</item>
+        <item>Similarities or differences between you and that person:\n\nOr, maybe, you would like to emphasize how you complement each other?</item>
+        <item>What would you like to wish to your dear person?\n\nThese wishes should be related to the event, be it health &amp; wealth wishes for a b-day,healthy relationship, harmony and many children for a wedding day or a successful career for someone who just finished studying in a college etc</item>
+    </string-array>
+</resources>

@@ -5,16 +5,81 @@
     <string name="title_activity_examples">ExamplesActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="text">Как хорошо ты, о море ночное, –\nЗдесь лучезарно, там сизо-темно...\nВ лунном сиянии, словно живое,\nХодит, и дышит, и блещет оно...\n\nНа бесконечном, на вольном просторе\nБлеск и движенье, грохот и гром...\nТусклым сияньем облитое море,\nКак хорошо ты в безлюдье ночном!\n\nЗыбь ты великая, зыбь ты морская,\nЧей это праздник так празднуешь ты?\nВолны несутся, гремя и сверкая,\nЧуткие звезды глядят с высоты.\n\nВ этом волнении, в этом сиянье,\nВесь, как во сне, я потерян стою –\nО, как охотно бы в их обаянье\nВсю потопил бы я душу свою...</string>
+    <string name="text">Those who say "age is just a number" - must be really smart\n
+Years keep passing, but you stay extremely young at heart\n
+You can act like a gentleman, a knight on a white horse\n
+And still remain the biggest hooligan on planet Earth!\n\n
 
-    <string name="text1">Осень – время мечтать и смотреть разноцветные сны,\nЗапивать холода самым лучшим жасминовым чаем,\nНе испытывать сплин или ложное чувство вины\nОт того, что дожди ну нисколечко не огорчают!\n\nОсень – время зонтов, что давно застоялись в углу.\nВремя  новых плащей и сапог в разноцветную клетку - \nЧтобы лично узнать глубину и количество луж,\nА не грустно вздыхать и скучать по ушедшему лету.\n\nОсень – время стихов с неизбежным наличием фраз \nОб унылой поре, листопаде,  капризах погоды…\nОсень – повод  подумать, почувствовать «здесь» и «сейчас»,\nИ, конечно, любить  вопреки всем законам природы!</string>
+You can cheer me up, then drive me crazy in no time\n
+You are more than a husband, you are my partner in crime\n
+Each day with you is an adventure for me and our 3 daughters\n
+And while we have you with us, there is nothing that can stop us!\n\n
+</string>
 
-    <string name="text2">Тихий голос моей души,\nГоворит мне: "Ты жить спеши...\nНе печалься и не хандри... \nЖизнь дается... а ты бери..."\nТы возьми...этот теплый свет...\nГде-то там его... просто нет... \nТы поймай...этот яркий луч...\nДаже если он... из-за туч... \nШелест листьев и детский крик, \nТы бери... и в себе храни... \nЛетний дождь... невесомый снег...\nТы бери...тихий плачь и смех...\nИ любовь,что тебе дана...\nТы испей её всю до дна...\nДаже если придет беда...\nТы возьми её не навсегда...\nЯ спрошу у своей души:\n"Может быть... посидим в тиши?"\nУлыбнется не зло она:\n"Ещё будет у нас... тишина..."</string>
+    <string name="text1">When blood red leaves start covering the ground\n
+The numbers of degrees gets close to zero\n
+In fog, the morning view gets suddenly enshrouded\n
+And eerie becomes all the atmosphere\n\n
+
+When sun rays show up early every morning\n
+But days become so short and nights get longer\n
+Winds howl and raindrops fall, affirming\n
+That summer’s gone and hidden in the yonder\n\n
+
+When boots and hats get once again in fashion\n
+And swimsuits get replaced with coats and scarves\n
+Sunlight turns bleak, the sky starts looking ashen\n
+Until night falls and lights the sky with stars\n\n
+
+That’s when I realize that autumn gives us\n
+So many reasons to sit by the fireplace\n
+To drink some tea and listen to wind’s whistles\n
+While waiting for the falling of snowflakes\n\n
+
+Though every season has its special charm\n
+And there is no such thing as bad weather\n
+I’ll stay the happy person that I am\n
+Only if you and I remain together\n</string>
+
+    <string name="text2">I took you from the shelter as a puppy\n
+You were so young and full of energy\n
+My wife, kids and myself, we were so lucky\n
+To have such a member in our family\n\n
+
+Being half-whippet, you were quite an athlete \n
+You could maneuver faster than a squirrel\n
+No one could catch you, once you started running\n
+You always were too playful to stand still\n\n
+
+And so we lived together, all these years\n
+It was us - humans, you, then Lily, too\n
+If someone asked what makes me really happy\n
+A fine example would be - having you\n\n
+
+To see the happy facial expression\n
+Whenever you ‘’cleaned’’ empty yogurt cans\n
+Each time we sang and you ate b-day cupcakes\n
+While playing with kids, being hugged by them\n\n
+
+While sleeping on my old couch, while swimming\n
+While playing fetch and fighting for the ball\n
+While walking a long distance, every evening\n
+Even when the weather was damn cold\n\n
+
+I will never forget your and Lily’s prank\n
+When you got unleashed and got sprayed by a skunk\n
+The mixture of tomato juice with your and Lily’s fur\n
+Looked like a shredded body, smeared on a door\n\n
+
+And even though you are no longer with us\n
+And those old times are gone and won’t return\n
+I hope that you are in a better place now\n
+My dearest friend, for whom I’ll always yearn\n\n</string>
     <string name="title_activity_quiz">QuizActivity</string>
     <string name="just_answer">Just answer a short list of questions regarding a person you hold dear and remember - the more information you provide, the more detailed and interesting your poem will get!\n</string>
     <string name="logo">Logo</string>
-    <string name="welcome_text">There are many different presents one can give, but I will write one that truly stands out.  Let\'s give your loved ones a SPECIAL treat!</string>
-    <string name="start">"     "Start</string>
+    <string name="welcome_text">There are many different presents one can give, but I will write one that truly stands out. Let\'s give your loved ones a SPECIAL treat!</string>
+    <string name="start">"     Start"</string>
     <string name="examples">"     "Examples</string>
     <string name="aboutButton">"     "About</string>
     <string name="prices">"     "Prices</string>
@@ -35,8 +100,8 @@
     <string name="price2">4 – 6 quatrains</string>
     <string name="price3">7 – 10 quatrains</string>
     <string name="left">Left</string>
-    <string name="right">Right</string>
-    <string name="if_you_don_t_know_the_answer">If you don\'t know the answer If you don\'t know the answer to a certain question, you may press \"next\", without typing anything.</string>
+    <string name="right">"Right "</string>
+    <string name="if_you_don_t_know_the_answer">If you don\'t know the answer to a certain question, you may press \"next\", without typing anything.</string>
 
     <string-array name="questions_array">
         <item>0</item>
