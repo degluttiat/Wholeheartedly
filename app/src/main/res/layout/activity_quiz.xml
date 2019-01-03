@@ -46,8 +46,8 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:text="@string/if_you_don_t_know_the_answer"
             android:textColor="@android:color/black"
-            android:visibility="gone"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:visibility="gone" />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/container"
@@ -57,42 +57,12 @@
             android:layout_below="@+id/section_label"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <!--<Button
-            android:id="@+id/quizButtonPrev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="16dp"
-            android:text="@string/prev"
-            android:visibility="invisible" />
 
-        <Button
-            android:id="@+id/quizButtonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="16dp"
-            android:text="@string/next" />
-
-            <Button
-            android:id="@+id/quizButtonSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="16dp"
-            android:background="#7b83c7"
-            android:text="@string/send"
-            android:visibility="invisible" />-->
 
         <ImageView
             android:id="@+id/quizButtonNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_margin="16dp"
@@ -102,6 +72,7 @@
             android:id="@+id/quizButtonPrev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_margin="16dp"
             android:src="@drawable/ic_chevron_left_black_40dp"
@@ -112,7 +83,6 @@
             android:id="@+id/quizButtonSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"

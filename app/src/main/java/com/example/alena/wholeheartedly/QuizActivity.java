@@ -4,15 +4,25 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchasesUpdatedListener;
 
-public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
+import java.util.List;
+
+
+public class QuizActivity extends AppCompatActivity
+        implements View.OnClickListener, PurchasesUpdatedListener {
 
     private ViewPager mViewPager;
     private ImageView imagePrev;
@@ -23,6 +33,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     private int currentPosition;
     private TextView mTextView;
 
+    private BillingClient mBillingClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +44,36 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         setToolBar();
         setViewsAndListeners();
         setViewPager();
+        setBilling();
     }
 
+    private void setBilling() {
+        mBillingClient = BillingClient.newBuilder(this).setListener(this).build();
+        mBillingClient.startConnection(new BillingClientStateListener() {
+            @Override
+            public void onBillingSetupFinished(@BillingClient.BillingResponse int responseCode) {
+                if (responseCode == BillingClient.BillingResponse.OK) {
+                    // The billing client is ready. You can query purchases here.
+                    onBillingConnected();
+                }
+            }
+            @Override
+            public void onBillingServiceDisconnected() {
+                // Try to restart the connection on the next request to
+                // Google Play by calling the startConnection() method.
+            }
+        });
+    }
+
+    private void onBillingConnected() {
+        Log.d("ZAQ", "Biling connected");
+    }
+
+    //PurchasesUpdatedListener
+    @Override
+    public void onPurchasesUpdated(int responseCode, @Nullable List<Purchase> purchases) {
+
+    }
 
     private void setToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -79,11 +119,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void onBtnSendClicked() {
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+
+
+/*        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                 getString(R.string.mailto), getString(R.string.email), null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject));
         emailIntent.putExtra(Intent.EXTRA_TEXT, getAnswersText());
-        startActivity(Intent.createChooser(emailIntent, getString(R.string.chooser_intent_title)));
+        startActivity(Intent.createChooser(emailIntent, getString(R.string.chooser_intent_title)));*/
     }
 
     private void setViewPager() {
