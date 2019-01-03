@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@drawable/fon2"
-    tools:context="com.example.alena.wholeheartedly.ExamplesActivity">
+    tools:context="com.example.alena.wholeheartedly.com.sergeipis.alena.wholeheartedly.ExamplesActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"

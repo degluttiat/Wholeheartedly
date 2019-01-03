@@ -1,4 +1,4 @@
-package com.example.alena.wholeheartedly;
+package com.sergeipis.alena.wholeheartedly;
 
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 public class ExamplesFragment extends Fragment {
 

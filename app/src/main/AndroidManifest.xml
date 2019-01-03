@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.alena.wholeheartedly">
+    package="com.sergeipis.alena.wholeheartedly">
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".MainActivity"
+            android:name="com.sergeipis.alena.wholeheartedly.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,19 +21,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name="com.sergeipis.alena.wholeheartedly.AboutActivity"
             android:label="About"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PricesActivity"
+            android:name="com.sergeipis.alena.wholeheartedly.PricesActivity"
             android:label="Prices"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ExamplesActivity"
+            android:name="com.sergeipis.alena.wholeheartedly.ExamplesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".QuizActivity"
+            android:name="com.sergeipis.alena.wholeheartedly.QuizActivity"
             android:label="@string/title_activity_quiz"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"

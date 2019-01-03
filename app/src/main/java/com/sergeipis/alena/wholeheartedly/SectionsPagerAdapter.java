@@ -1,4 +1,4 @@
-package com.example.alena.wholeheartedly;
+package com.sergeipis.alena.wholeheartedly;
 
 
 import android.support.v4.app.Fragment;

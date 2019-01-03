@@ -1,4 +1,4 @@
-package com.example.alena.wholeheartedly;
+package com.sergeipis.alena.wholeheartedly;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
 
 public class QuestionFragment extends Fragment {
 
