@@ -1,6 +1,8 @@
 package com.sergeipis.alena.wholeheartedly;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
@@ -16,11 +18,7 @@ import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
-import com.android.billingclient.api.SkuDetails;
-import com.android.billingclient.api.SkuDetailsParams;
-import com.android.billingclient.api.SkuDetailsResponseListener;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -42,7 +40,7 @@ public class QuizActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        mShPref = getApplicationContext().getSharedPreferences("shpref", MODE_PRIVATE);
+        mShPref = getApplicationContext().getSharedPreferences(MainActivity.SHPREF_PRICES, MODE_PRIVATE);
         mTextView = findViewById(R.id.section_label);
         setToolBar();
         setViewsAndListeners();
@@ -71,43 +69,22 @@ public class QuizActivity extends AppCompatActivity
 
     private void onBillingConnected() {
         Log.d("ZAQ", "Biling connected");
-
-        getPrices();
-
-        testPurchase();
-    }
-
-    private void testPurchase() {
-        BillingFlowParams flowParams = BillingFlowParams.newBuilder()
-                .setSku("2_3_quatrains")
-                .setType(BillingClient.SkuType.INAPP) // SkuType.SUB for subscription
-                .build();
-        int responseCode = mBillingClient.launchBillingFlow(this, flowParams);
-    }
-
-    private void getPrices() {
-        List<String> skuList = new ArrayList<>();
-        skuList.add("2_3_quatrains");
-        skuList.add("4_6_quatrains");
-        skuList.add("7_10_quatrains");
-        SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-        params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
-        mBillingClient.querySkuDetailsAsync(params.build(),
-                new SkuDetailsResponseListener() {
-                    @Override
-                    public void onSkuDetailsResponse(int responseCode, List<SkuDetails> skuDetailsList) {
-                        for (SkuDetails skuDetails : skuDetailsList) {
-                            Log.d("ZAQ", "Name: " + skuDetails.getTitle()
-                                    + " Price: " + skuDetails.getPrice());
-                        }
-                    }
-                });
+        //testPurchase();
     }
 
     //PurchasesUpdatedListener
     @Override
     public void onPurchasesUpdated(int responseCode, @Nullable List<Purchase> purchases) {
-        Log.d("ZAQ", "onPurchasesUpdated");
+        Log.d("ZAQ", "onPurchasesUpdated, responseCode: " + responseCode);
+        if (purchases != null) {
+            for (Purchase purchase : purchases) {
+                Log.d("ZAQ", " Product ID: " + purchase.getSku());
+                Log.d("ZAQ", " Order ID: " + purchase.getOrderId());
+                Log.d("ZAQ", " Purchase time: " + purchase.getPurchaseTime());
+                sendMail(purchase.getSku(), purchase.getOrderId());
+            }
+        }
+
     }
 
     private void setToolBar() {
@@ -154,13 +131,23 @@ public class QuizActivity extends AppCompatActivity
     }
 
     private void onBtnSendClicked() {
+        QuestionFragment fragment = getCurrentFragment();
+        String selectedProductId = fragment.getSelectedProduct();
 
+        BillingFlowParams flowParams = BillingFlowParams.newBuilder()
+                .setSku(selectedProductId)
+                .setType(BillingClient.SkuType.INAPP) // SkuType.SUB for subscription
+                .build();
+        int responseCode = mBillingClient.launchBillingFlow(this, flowParams);
+        Log.d("ZAQ", "responseCode: " + responseCode);
+    }
 
-/*        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+    private void sendMail(String sku, String orderId) {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                 getString(R.string.mailto), getString(R.string.email), null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject));
-        emailIntent.putExtra(Intent.EXTRA_TEXT, getAnswersText());
-        startActivity(Intent.createChooser(emailIntent, getString(R.string.chooser_intent_title)));*/
+        emailIntent.putExtra(Intent.EXTRA_TEXT, getAnswersText(sku, orderId));
+        startActivity(Intent.createChooser(emailIntent, getString(R.string.chooser_intent_title)));
     }
 
     private void setViewPager() {
@@ -214,7 +201,7 @@ public class QuizActivity extends AppCompatActivity
     }
 
 
-    private String getAnswersText() {
+    private String getAnswersText(String sku, String orderId) {
         String[] answers = new String[18];
         for (int i = 0; i < answers.length; i++) {
             answers[i] = mShPref.getString("q" + i, "Null");
@@ -232,8 +219,8 @@ public class QuizActivity extends AppCompatActivity
                 "\nOutlook: \n" + answers[13] + "\nGood or bad habits: \n" + answers[14] +
                 "\nHow has that person impacted you? \n" + answers[15] +
                 "\nSimilarities or differences between you and that person: \n" + answers[16] +
-                "\nWhat would you like to wish to your dear person? \n" + answers[17];
+                "\nWhat would you like to wish to your dear person? \n" + answers[17] +
+                "\nProduct ID user paid for: \n" + sku +
+                "\nOrder ID: \n" + orderId;
     }
-
-
 }

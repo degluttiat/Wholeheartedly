@@ -57,7 +57,7 @@ public class PricesActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        SharedPreferences shPref = getApplicationContext().getSharedPreferences("shpref", MODE_PRIVATE);
+        SharedPreferences shPref = getApplicationContext().getSharedPreferences(MainActivity.SHPREF_PRICES, MODE_PRIVATE);
         SharedPreferences.Editor editor = shPref.edit();
 
         switch (view.getId()) {

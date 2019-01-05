@@ -52,6 +52,24 @@ public class QuestionFragment extends Fragment {
         }
     }
 
+    public String getSelectedProduct() {
+        if (mRadioGroup == null) {
+            return "";
+        }
+        int x = mRadioGroup.getCheckedRadioButtonId(); // -1 or id of selected RadioButton
+
+        switch (x) {
+            case R.id.radio_1:
+                return MainActivity.QUATRAINS_1;
+            case R.id.radio_2:
+                return MainActivity.QUATRAINS_2;
+            case R.id.radio_3:
+                return  MainActivity.QUATRAINS_3;
+            default:
+                return "";
+        }
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -89,7 +107,14 @@ public class QuestionFragment extends Fragment {
         RadioButton radioButton_3 = rootView.findViewById(R.id.radio_3);
 
         SharedPreferences shPref = getContext().getApplicationContext()
-                .getSharedPreferences("shpref", Context.MODE_PRIVATE);
+                .getSharedPreferences(MainActivity.SHPREF_PRICES, Context.MODE_PRIVATE);
+
+        String price1 = shPref.getString(MainActivity.QUATRAINS_1, "");
+        String price2 = shPref.getString(MainActivity.QUATRAINS_2, "");
+        String price3 = shPref.getString(MainActivity.QUATRAINS_3, "");
+        radioButton_1.setText(String.format("%s - %s", radioButton_1.getText(), price1));
+        radioButton_2.setText(String.format("%s - %s", radioButton_2.getText(), price2));
+        radioButton_3.setText(String.format("%s - %s", radioButton_3.getText(), price3));
 
         int priceTag = shPref.getInt(getString(R.string.key_price_tag), 0);
         switch (priceTag) {
