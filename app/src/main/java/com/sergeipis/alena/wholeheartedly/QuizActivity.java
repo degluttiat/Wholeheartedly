@@ -13,9 +13,14 @@ import android.widget.TextView;
 
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.SkuDetailsResponseListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -55,6 +60,7 @@ public class QuizActivity extends AppCompatActivity
                     onBillingConnected();
                 }
             }
+
             @Override
             public void onBillingServiceDisconnected() {
                 // Try to restart the connection on the next request to
@@ -65,12 +71,43 @@ public class QuizActivity extends AppCompatActivity
 
     private void onBillingConnected() {
         Log.d("ZAQ", "Biling connected");
+
+        getPrices();
+
+        testPurchase();
+    }
+
+    private void testPurchase() {
+        BillingFlowParams flowParams = BillingFlowParams.newBuilder()
+                .setSku("2_3_quatrains")
+                .setType(BillingClient.SkuType.INAPP) // SkuType.SUB for subscription
+                .build();
+        int responseCode = mBillingClient.launchBillingFlow(this, flowParams);
+    }
+
+    private void getPrices() {
+        List<String> skuList = new ArrayList<>();
+        skuList.add("2_3_quatrains");
+        skuList.add("4_6_quatrains");
+        skuList.add("7_10_quatrains");
+        SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
+        params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
+        mBillingClient.querySkuDetailsAsync(params.build(),
+                new SkuDetailsResponseListener() {
+                    @Override
+                    public void onSkuDetailsResponse(int responseCode, List<SkuDetails> skuDetailsList) {
+                        for (SkuDetails skuDetails : skuDetailsList) {
+                            Log.d("ZAQ", "Name: " + skuDetails.getTitle()
+                                    + " Price: " + skuDetails.getPrice());
+                        }
+                    }
+                });
     }
 
     //PurchasesUpdatedListener
     @Override
     public void onPurchasesUpdated(int responseCode, @Nullable List<Purchase> purchases) {
-
+        Log.d("ZAQ", "onPurchasesUpdated");
     }
 
     private void setToolBar() {
