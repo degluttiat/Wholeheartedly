@@ -5,7 +5,7 @@
     <string name="title_activity_examples">ExamplesActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="text">Those who say "age is just a number" - must be really smart\n
+    <string name="text2">Those who say "age is just a number" - must be really smart\n
 Years keep passing, but you stay extremely young at heart\n
 You can act like a gentleman, a knight on a white horse\n
 And still remain the biggest hooligan on planet Earth!\n\n
@@ -41,7 +41,7 @@ And there is no such thing as bad weather\n
 I’ll stay the happy person that I am\n
 Only if you and I remain together\n</string>
 
-    <string name="text2">I took you from the shelter as a puppy\n
+    <string name="text">I took you from the shelter as a puppy\n
 You were so young and full of energy\n
 My wife, kids and myself, we were so lucky\n
 To have such a member in our family\n\n

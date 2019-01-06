@@ -32,7 +32,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_examples">ExamplesActivity</string>
-    <string name="text">"\t\tתמי ואני, כבר אומנם לא בצופים
+    <string name="text2">"\t\tתמי ואני, כבר אומנם לא בצופים
      אבל בכיף גדול עוברים להם העשורים
      עם גישה יצירתית והרבה שוקולד מתוק
      האדריכלית הזאת עושה הכל כה טוב!
@@ -70,7 +70,7 @@
      אל תהססו ליזום - אם תנסו, תצליחו!
      תמשיך לשמש דוגמה טובה, בתור הורים
      והכי חשוב - תהיו כולכם תמיד בריאים! "</string>
-    <string name="text2">"\t\tלא לכל אחת יש חברה
+    <string name="text">"\t\tלא לכל אחת יש חברה
      שלא מאכזבת כבר 15 שנה
      אולי רמזתי פעם שאת די מפונקת
      אך את גם מפנקת את קרובייך באהבה!
