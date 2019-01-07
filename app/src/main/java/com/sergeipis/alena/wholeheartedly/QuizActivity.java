@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 
@@ -81,10 +82,23 @@ public class QuizActivity extends AppCompatActivity
                 Log.d("ZAQ", " Product ID: " + purchase.getSku());
                 Log.d("ZAQ", " Order ID: " + purchase.getOrderId());
                 Log.d("ZAQ", " Purchase time: " + purchase.getPurchaseTime());
-                sendMail(purchase.getSku(), purchase.getOrderId());
+                consumePurchase(purchase);
             }
         }
 
+    }
+
+    private void consumePurchase(final Purchase purchase) {
+        ConsumeResponseListener listener = new ConsumeResponseListener() {
+            @Override
+            public void onConsumeResponse(@BillingClient.BillingResponse int responseCode, String outToken) {
+                if (responseCode == BillingClient.BillingResponse.OK) {
+                    // Handle the success of the consume operation.
+                    // For example, increase the number of coins inside the user's basket.
+                    sendMail(purchase.getSku(), purchase.getOrderId());
+                }
+            }};
+            mBillingClient.consumeAsync(purchase.getPurchaseToken(), listener);
     }
 
     private void setToolBar() {
