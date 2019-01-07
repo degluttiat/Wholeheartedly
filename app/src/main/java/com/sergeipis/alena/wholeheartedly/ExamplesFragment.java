@@ -11,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class ExamplesFragment extends Fragment {
+public class ExamplesFragment extends Fragment implements View.OnClickListener{
 
     private static final String ARG_SECTION_NUMBER = "section_number";
+    private ImageView btnLeft;
+    private ImageView btnRight;
 
     public ExamplesFragment() {
     }
@@ -34,8 +36,8 @@ public class ExamplesFragment extends Fragment {
         TextView textView = rootView.findViewById(R.id.section_label);
         int section = getArguments().getInt(ARG_SECTION_NUMBER);
         ConstraintLayout layout = rootView.findViewById(R.id.constraintLayout);
-        ImageView btnLeft = rootView.findViewById(R.id.btnLeft);
-        ImageView btnRight = rootView.findViewById(R.id.btnRight);
+        btnLeft = rootView.findViewById(R.id.btnLeft);
+        btnRight = rootView.findViewById(R.id.btnRight);
         //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
         switch (section) {
             case 1:
@@ -51,9 +53,25 @@ public class ExamplesFragment extends Fragment {
                 break;
         }
 
+        btnLeft.setOnClickListener(this);
+        btnRight.setOnClickListener(this);
 
         return rootView;
     }
 
+    // View.OnClickListener
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnLeft:
+                ((ExamplesActivity)getActivity()).onBtnLeftClick();
+                break;
+            case R.id.btnRight:
+                ((ExamplesActivity)getActivity()).onBtnRightClick();
+                break;
+
+        }
+    }
 }
 

@@ -37,6 +37,14 @@ public class ExamplesActivity extends AppCompatActivity{
 
     }
 
+    public void onBtnLeftClick() {
+        mViewPager.arrowScroll(View.FOCUS_LEFT);
+    }
+
+    public void onBtnRightClick() {
+        mViewPager.arrowScroll(View.FOCUS_RIGHT);
+    }
+
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
