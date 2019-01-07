@@ -22,7 +22,7 @@ public class PricesActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_prices);
 
         Toolbar toolbar = findViewById(R.id.my_toolbar);
-        toolbar.setTitle("Prices");
+        toolbar.setTitle(R.string.prices_);
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
 

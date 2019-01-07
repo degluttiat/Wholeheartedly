@@ -7,9 +7,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
 
 
-public class ExamplesActivity extends AppCompatActivity {
+public class ExamplesActivity extends AppCompatActivity{
+
 
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -24,16 +27,15 @@ public class ExamplesActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("Examples");
+        toolbar.setTitle(R.string.example_);
 
         mViewPager = findViewById(R.id.container);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+
     }
-
-
 
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

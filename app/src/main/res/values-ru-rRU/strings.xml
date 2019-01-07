@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Wholeheartedly</string>
+    <string name="app_name">От всего сердца</string>
     <string name="start">"  Начать"</string>
     <string name="if_you_don_t_know_the_answer">Если вы не знаете ответа на определённый вопрос, вы можете нажать “дальше”, ничего не заполняя.</string>
     <string name="select_option">Для продолжения, выберите один из вариантов.</string>
@@ -144,6 +144,10 @@
    И когда за окном ненастье
    Учись, а я уж позабочусь
    О Любви, ну и о счастье!"</string>
+
+    <string name="example_">Примеры</string>
+    <string name="prices_">Цены</string>
+    <string name="quiz_">Анкета</string>
 
     <string-array name="questions_array">
         <item>0</item>

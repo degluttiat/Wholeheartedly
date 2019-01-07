@@ -102,6 +102,9 @@ My dearest friend, for whom I’ll always yearn\n\n</string>
     <string name="left">Left</string>
     <string name="right">"Right "</string>
     <string name="if_you_don_t_know_the_answer">If you don\'t know the answer to a certain question, you may press \"next\", without typing anything.</string>
+    <string name="example_">Examples</string>
+    <string name="prices_">Prices</string>
+    <string name="quiz_">Quiz</string>
 
     <string-array name="questions_array">
         <item>0</item>

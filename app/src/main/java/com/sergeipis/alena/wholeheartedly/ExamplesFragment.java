@@ -1,5 +1,6 @@
 package com.sergeipis.alena.wholeheartedly;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
@@ -49,7 +50,10 @@ public class ExamplesFragment extends Fragment {
                 textView.setText(getString(R.string.text));
                 break;
         }
+
+
         return rootView;
     }
+
 }
 

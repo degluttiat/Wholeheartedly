@@ -90,7 +90,7 @@ public class QuizActivity extends AppCompatActivity
     private void setToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("Quiz");
+        toolbar.setTitle(R.string.quiz_);
     }
 
     private void setViewsAndListeners() {
@@ -169,7 +169,7 @@ public class QuizActivity extends AppCompatActivity
                     QuestionFragment questionFragment = (QuestionFragment) mSectionsPagerAdapter
                             .instantiateItem(mViewPager, currentPosition);
                     String text = questionFragment.getEditTextString();
-                    saveTextToShPref(currentPosition, text);
+                    saveTextToShPref(currentPosition -1, text);
                 }
                 currentPosition = position;
 

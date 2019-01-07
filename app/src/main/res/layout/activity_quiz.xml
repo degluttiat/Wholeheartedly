@@ -8,7 +8,7 @@
     android:background="@drawable/fon2"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.example.alena.wholeheartedly.com.sergeipis.alena.wholeheartedly.QuizActivity">
+    tools:context="com.sergeipis.alena.wholeheartedly.QuizActivity">
 
 
     <android.support.design.widget.AppBarLayout

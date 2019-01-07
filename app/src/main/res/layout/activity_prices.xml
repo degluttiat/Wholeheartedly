@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fon2"
     android:orientation="vertical"
-    tools:context="com.example.alena.wholeheartedly.com.sergeipis.alena.wholeheartedly.PricesActivity">
+    tools:context="com.sergeipis.alena.wholeheartedly.PricesActivity">
 
 
     <android.support.v7.widget.Toolbar
