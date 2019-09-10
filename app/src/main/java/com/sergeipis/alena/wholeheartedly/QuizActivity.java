@@ -13,12 +13,19 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.billingclient.api.AcknowledgePurchaseParams;
+import com.android.billingclient.api.AcknowledgePurchaseResponseListener;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.ConsumeParams;
 import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.SkuDetails;
+
+import org.json.JSONException;
 
 import java.util.List;
 
@@ -50,12 +57,14 @@ public class QuizActivity extends AppCompatActivity
     }
 
     private void setBilling() {
-        mBillingClient = BillingClient.newBuilder(this).setListener(this).build();
+        mBillingClient = BillingClient.newBuilder(this)
+                .enablePendingPurchases()
+                .setListener(this).build();
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
-            public void onBillingSetupFinished(@BillingClient.BillingResponse int responseCode) {
-                if (responseCode == BillingClient.BillingResponse.OK) {
-                    // The billing client is ready. You can query purchases here.
+            public void onBillingSetupFinished(BillingResult billingResult) {
+                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                    // The BillingClient is ready. You can query purchases here.
                     onBillingConnected();
                 }
             }
@@ -69,36 +78,61 @@ public class QuizActivity extends AppCompatActivity
     }
 
     private void onBillingConnected() {
-        Log.d("ZAQ", "Biling connected");
+//        Log.d("ZAQ", "Biling connected");
         //testPurchase();
     }
 
     //PurchasesUpdatedListener
+
     @Override
-    public void onPurchasesUpdated(int responseCode, @Nullable List<Purchase> purchases) {
-        Log.d("ZAQ", "onPurchasesUpdated, responseCode: " + responseCode);
+    public void onPurchasesUpdated(BillingResult billingResult, @Nullable List<Purchase> purchases) {
+//        Log.d("ZAQ", "onPurchasesUpdated, responseCode: " + billingResult.getResponseCode());
         if (purchases != null) {
             for (Purchase purchase : purchases) {
-                Log.d("ZAQ", " Product ID: " + purchase.getSku());
+                /*Log.d("ZAQ", " Product ID: " + purchase.getSku());
                 Log.d("ZAQ", " Order ID: " + purchase.getOrderId());
-                Log.d("ZAQ", " Purchase time: " + purchase.getPurchaseTime());
+                Log.d("ZAQ", " Purchase time: " + purchase.getPurchaseTime());*/
+                acknowledgePurchase(purchase);
                 consumePurchase(purchase);
             }
         }
+    }
 
+    private void acknowledgePurchase(final Purchase purchase) {
+        AcknowledgePurchaseResponseListener acknowledgePurchaseResponseListener = new AcknowledgePurchaseResponseListener() {
+            @Override
+            public void onAcknowledgePurchaseResponse(BillingResult billingResult) {
+                sendMail(purchase.getSku(), purchase.getOrderId());
+            }
+        };
+
+        if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
+            if (!purchase.isAcknowledged()) {
+                AcknowledgePurchaseParams acknowledgePurchaseParams =
+                        AcknowledgePurchaseParams.newBuilder()
+                                .setPurchaseToken(purchase.getPurchaseToken())
+                                .build();
+                mBillingClient.acknowledgePurchase(acknowledgePurchaseParams,
+                        acknowledgePurchaseResponseListener);
+            }
+        }
     }
 
     private void consumePurchase(final Purchase purchase) {
+
         ConsumeResponseListener listener = new ConsumeResponseListener() {
             @Override
-            public void onConsumeResponse(@BillingClient.BillingResponse int responseCode, String outToken) {
-                if (responseCode == BillingClient.BillingResponse.OK) {
-                    // Handle the success of the consume operation.
-                    // For example, increase the number of coins inside the user's basket.
-                    sendMail(purchase.getSku(), purchase.getOrderId());
-                }
-            }};
-            mBillingClient.consumeAsync(purchase.getPurchaseToken(), listener);
+            public void onConsumeResponse(BillingResult billingResult, String purchaseToken) {
+//                Log.d("ZAQ", "onConsumePurchaseResponse: " + billingResult.getResponseCode());
+            }
+        };
+
+        ConsumeParams consumeParams =
+                ConsumeParams.newBuilder()
+                        .setPurchaseToken(purchase.getPurchaseToken())
+                        .build();
+
+        mBillingClient.consumeAsync(consumeParams, listener);
     }
 
     private void setToolBar() {
@@ -146,14 +180,25 @@ public class QuizActivity extends AppCompatActivity
 
     private void onBtnSendClicked() {
         QuestionFragment fragment = getCurrentFragment();
-        String selectedProductId = fragment.getSelectedProduct();
+        String selectedProductSkuId = fragment.getSelectedProduct();
+        String skuJson = mShPref.getString(selectedProductSkuId + "json", "");
+        SkuDetails skuDetails = null;
+        try {
+            skuDetails = new SkuDetails(skuJson);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if (skuDetails == null) {
+            return;
+        }
 
         BillingFlowParams flowParams = BillingFlowParams.newBuilder()
-                .setSku(selectedProductId)
-                .setType(BillingClient.SkuType.INAPP) // SkuType.SUB for subscription
+                .setSkuDetails(skuDetails)
                 .build();
-        int responseCode = mBillingClient.launchBillingFlow(this, flowParams);
-        Log.d("ZAQ", "responseCode: " + responseCode);
+        BillingResult billingResult = mBillingClient.launchBillingFlow(this, flowParams);
+
+//        Log.d("ZAQ", "responseCode: " + billingResult.getResponseCode());
     }
 
     private void sendMail(String sku, String orderId) {
@@ -183,7 +228,7 @@ public class QuizActivity extends AppCompatActivity
                     QuestionFragment questionFragment = (QuestionFragment) mSectionsPagerAdapter
                             .instantiateItem(mViewPager, currentPosition);
                     String text = questionFragment.getEditTextString();
-                    saveTextToShPref(currentPosition -1, text);
+                    saveTextToShPref(currentPosition - 1, text);
                 }
                 currentPosition = position;
 
